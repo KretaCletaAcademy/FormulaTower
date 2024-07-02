@@ -727,7 +727,7 @@ TextureImporter:
         width: 16
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -748,7 +748,7 @@ TextureImporter:
         width: 32
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -769,7 +769,7 @@ TextureImporter:
         width: 31
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -777,6 +777,237 @@ TextureImporter:
       bones: []
       spriteID: e345db136c21dfe48875d2799cfb6574
       internalID: -16621055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain_atlas_32
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 878
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cfd4396e098ae54cb719f3062fbf073
+      internalID: 2053837113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain_atlas_33
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 872
+        width: 93
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6161622ea72d0419f731da1fa4cf7b
+      internalID: 1195475973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain_atlas_34
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 578
+        width: 94
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a9b632bf21da1448e7575de62de38c
+      internalID: -414949879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain_atlas_35
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 449
+        width: 81
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49adc91d6b9ae44bb3dcd62b704d40e
+      internalID: 1943419442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain_atlas_36
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 432
+        width: 74
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d6459aa0b1cad448e2f3f009cd6c77
+      internalID: -1237766046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain_atlas_37
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 370
+        width: 62
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347d18e884c258c43b044ddde8863e30
+      internalID: -1150444770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain_atlas_38
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 298
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2a28fa7bffb4b44bbde712d3d42239
+      internalID: -138451835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain_atlas_39
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 302
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4851b89f39608304caa93fac13834ed5
+      internalID: -1138843046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain_atlas_40
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 259
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18422894824e09d479d15de323f972ab
+      internalID: 1373881932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain_atlas_41
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 4
+        width: 94
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9bd984301c687e49a5cc496c5becafb
+      internalID: -1922317808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: terrain_atlas_42
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 0
+        width: 94
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9196f499c24cbc44b93fcbb593407724
+      internalID: -628890033
       vertices: []
       indices: 
       edges: []
@@ -818,7 +1049,18 @@ TextureImporter:
       terrain_atlas_3: 2076434821
       terrain_atlas_30: 395450263
       terrain_atlas_31: -16621055
+      terrain_atlas_32: 2053837113
+      terrain_atlas_33: 1195475973
+      terrain_atlas_34: -414949879
+      terrain_atlas_35: 1943419442
+      terrain_atlas_36: -1237766046
+      terrain_atlas_37: -1150444770
+      terrain_atlas_38: -138451835
+      terrain_atlas_39: -1138843046
       terrain_atlas_4: 16521029
+      terrain_atlas_40: 1373881932
+      terrain_atlas_41: -1922317808
+      terrain_atlas_42: -628890033
       terrain_atlas_5: -23853687
       terrain_atlas_6: -1515828284
       terrain_atlas_7: 268367688
