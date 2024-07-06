@@ -35,6 +35,7 @@ public sealed class PowerBarMechanics
     public void OnDisable()
     {
         power.Unsubscribe(OnPowerPointsChanged);
+        Object.Destroy(powerBarObject);
     }
 
     private void OnPowerPointsChanged(int powerChanges)
