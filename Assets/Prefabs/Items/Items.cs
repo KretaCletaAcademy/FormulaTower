@@ -7,11 +7,13 @@ public class Items : MonoBehaviour
     
     public GameObject powerBarPrefab;
 
+    public string powerBarText;
+
     private PowerBarMechanics barMechanics;
 
     private void Awake()
     {
-        barMechanics = new PowerBarMechanics(power, powerBarEvent, powerBarPrefab, transform.position);
+        barMechanics = new PowerBarMechanics(power, powerBarEvent, powerBarPrefab, transform.position, powerBarText);
     }
 
     private void OnEnable()

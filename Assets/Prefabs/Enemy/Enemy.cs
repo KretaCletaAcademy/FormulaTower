@@ -8,7 +8,8 @@ public class Enemy : MonoBehaviour
     public AtomicEvent<bool> deathEvent;
     public AtomicEvent<int> powerBarEvent;
     public AtomicEvent<int> powerComprasionEvent;
-    
+
+    public string powerBarText;
 
     public GameObject powerBarPrefab;
 
@@ -19,7 +20,7 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         deathMechanics = new DeathMechanics(power, isDead, deathEvent);
-        powerBarMechanics = new PowerBarMechanics(power, powerBarEvent, powerBarPrefab, transform.position);
+        powerBarMechanics = new PowerBarMechanics(power, powerBarEvent, powerBarPrefab, transform.position, powerBarText);
         powerСomparisonMechaincs = new PowerСomparisonMechaincs(power, powerComprasionEvent);
     }
 

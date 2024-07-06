@@ -5,6 +5,8 @@ public sealed class PowerBarMechanics
 {
     private readonly AtomicVariable<int> power;
     private readonly AtomicEvent<int> powerEvent;
+
+    public string? powerBarText;
    
     public TextMeshPro powerBar;
     private GameObject powerBarObject;
@@ -13,7 +15,8 @@ public sealed class PowerBarMechanics
         AtomicVariable<int> power,
         AtomicEvent<int> powerEvent,
         GameObject powerBar,
-        Vector3 position
+        Vector3 position,
+        string? powerBarText=null
     )
     {
         this.power = power;
@@ -23,7 +26,7 @@ public sealed class PowerBarMechanics
         
         this.powerEvent = powerEvent;
         this.powerBar = powerBarObject.GetComponent<TextMeshPro>();
-
+        this.powerBarText = powerBarText;
         OnPowerPointsChanged(power.Value);
     }
 
@@ -40,7 +43,13 @@ public sealed class PowerBarMechanics
 
     private void OnPowerPointsChanged(int powerChanges)
     {
-        powerBar.text = power.Value.ToString();
+        if (powerBarText == null)
+        {
+            powerBar.text = power.Value.ToString();
+        }
+        else {
+            powerBar.text = powerBarText;
+        }
         powerBar.SetAllDirty();
     }
 }
