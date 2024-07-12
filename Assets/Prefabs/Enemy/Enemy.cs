@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -10,6 +11,8 @@ public class Enemy : MonoBehaviour
     public AtomicEvent<int> powerComprasionEvent;
 
     public string powerBarText;
+
+    public List<Transform> points = new List<Transform>();
 
     public GameObject powerBarPrefab;
 
@@ -44,11 +47,12 @@ public class Enemy : MonoBehaviour
         
         instance.comparisonPowerEvent.Invoke(power.Value);
         instance.powerBarEvent.Invoke(instance.power.Value);
-
+        Debug.Log(instance.power.Value);
         if (instance.power.Value != 0)
         {
             power.Value = 0;
-            //powerBarEvent.Invoke(0);
+            instance.moveEvent.Invoke(points);
+            Destroy(gameObject);
         }
     }
 }

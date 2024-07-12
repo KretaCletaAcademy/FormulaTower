@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public sealed class PowerBarMechanics
 {
@@ -51,5 +52,10 @@ public sealed class PowerBarMechanics
             powerBar.text = powerBarText;
         }
         powerBar.SetAllDirty();
+    }
+
+    public void Update(Vector3 position)
+    {
+        powerBarObject.transform.position = position;
     }
 }
