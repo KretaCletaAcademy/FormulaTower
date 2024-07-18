@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Items : MonoBehaviour
 {
-    public AtomicVariable<int> power;
+    private AtomicVariable<int> power;
     public AtomicEvent<int> powerBarEvent;
     
     public GameObject powerBarPrefab;
@@ -13,6 +13,7 @@ public class Items : MonoBehaviour
 
     private void Awake()
     {
+        power = new AtomicVariable<int>(EvaluteMechanics.Eval(powerBarText));
         barMechanics = new PowerBarMechanics(power, powerBarEvent, powerBarPrefab, transform.position, powerBarText);
     }
 

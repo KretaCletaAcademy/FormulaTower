@@ -12,7 +12,6 @@ public sealed class WayPointsMechaincs
 
     private readonly AtomicEvent<List<Transform>> _moveEvent;
 
-
     public WayPointsMechaincs(AtomicEvent<List<Transform>> moveEvent, float speed)
     {
         _moveEvent = moveEvent;

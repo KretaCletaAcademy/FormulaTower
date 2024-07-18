@@ -1,7 +1,5 @@
 using System;
 using UnityEngine;
-
-[Serializable]
 public sealed class AtomicVariable<T>
 {
     private event Action<T> onValueChanged;

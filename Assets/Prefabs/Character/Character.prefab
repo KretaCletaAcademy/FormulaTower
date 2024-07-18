@@ -97,8 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6b8cab4e9b31044945ef486027c912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power:
-    value: 11
-  isDead:
-    value: 0
+  powerValue: 10
   powerBarPrefab: {fileID: 4235256469450072562, guid: 708423d3b9da2c6458f455cf3c2cd39e, type: 3}
+  speed: 10

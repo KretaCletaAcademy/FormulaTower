@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    [SerializeField]
+    private int powerValue;
+
     public AtomicVariable<int> power;
     public AtomicVariable<bool> isDead;
 
@@ -24,6 +27,8 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
+        power = new AtomicVariable<int>(powerValue);
+        isDead = new AtomicVariable<bool>(false);
         comparisonPower = new PowerСomparisonMechaincs(power, comparisonPowerEvent);
         deathMechanics = new DeathMechanics(power, isDead, deathEvent);
         barMechanics = new PowerBarMechanics(power, powerBarEvent, powerBarPrefab, transform.position);
