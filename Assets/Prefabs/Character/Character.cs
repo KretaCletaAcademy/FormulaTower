@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
     private int powerValue;
 
     public AtomicVariable<int> power;
+    [SerializeField]
     public AtomicVariable<bool> isDead;
 
     public AtomicEvent<int> comparisonPowerEvent;
@@ -22,6 +23,8 @@ public class Character : MonoBehaviour
     private DeathMechanics deathMechanics;
     private PowerBarMechanics barMechanics;
     private WayPointsMechaincs wayPointsMechanics;
+
+    public DeathScreen deathScreen;
 
     public static Character instance { get; private set; }
 
@@ -57,5 +60,10 @@ public class Character : MonoBehaviour
     {
         wayPointsMechanics.Update();
         barMechanics.Update(transform.position);
+
+        if (isDead.Value)
+        {
+            deathScreen.ShowDeathScreen();
+        }
     }
 }
