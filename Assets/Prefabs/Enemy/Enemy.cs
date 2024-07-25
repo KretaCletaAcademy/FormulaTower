@@ -41,13 +41,14 @@ public class Enemy : MonoBehaviour
 
     private void OnDisable()
     {
-        powerСomparisonMechaincs.OnDisable();
+        powerСomparisonMechaincs.OnDisable(); 
         deathMechanics.OnDisable();
         powerBarMechanics.OnDisable();
     }
 
     private void OnMouseDown()
     {
+        if (!Arena.CheckEnemy(this)) return;
         var instance = Character.instance;
         instance.comparisonPowerEvent.Invoke(power.Value);
         instance.powerBarEvent.Invoke(instance.power.Value);

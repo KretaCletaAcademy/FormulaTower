@@ -26,6 +26,8 @@ public class Character : MonoBehaviour
 
     public DeathScreen deathScreen;
 
+    public Arena arena;
+
     public static Character instance { get; private set; }
 
     private void Awake()

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Items : MonoBehaviour
+public class Item : MonoBehaviour
 {
     private AtomicVariable<int> power;
     public AtomicEvent<int> powerBarEvent;
@@ -29,6 +29,7 @@ public class Items : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (!Arena.CheckItem(this)) return;
         var character = Character.instance;
         character.power.Value += power.Value;
         Destroy(this.gameObject);

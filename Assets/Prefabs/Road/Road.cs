@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 class Road: MonoBehaviour
@@ -16,7 +15,10 @@ class Road: MonoBehaviour
     private List<Transform> points;
 
     [SerializeField]
-    private Road? previousRoad = null;
+    private Arena fromArena;
+
+    [SerializeField]
+    private Arena toArena;
 
     [SerializeField]
     private GameObject powerBarPrefab;
@@ -41,21 +43,17 @@ class Road: MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log(Road.roads.Contains(previousRoad));
-        if (previousRoad != null && !Road.roads.Contains(previousRoad)) {
+        var instance = Character.instance;
+        if (instance.arena != fromArena) {
             return;
         }
-        var instance = Character.instance;
         instance.comparisonPowerEvent.Invoke(power.Value);
         instance.powerBarEvent.Invoke(instance.power.Value);
         if (instance.power.Value != 0)
         {
-            if (previousRoad != null)
-                Road.roads.Add(previousRoad);
-            else
-                Road.roads.Add(this);
             power.Value = 0;
             instance.moveEvent.Invoke(points);
+            instance.arena = toArena;
         }
     }
 }
