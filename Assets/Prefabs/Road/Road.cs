@@ -51,9 +51,11 @@ class Road: MonoBehaviour
         instance.powerBarEvent.Invoke(instance.power.Value);
         if (instance.power.Value != 0)
         {
+            if (instance.arena != null) instance.arena.DisableHighlight();
             power.Value = 0;
             instance.moveEvent.Invoke(points);
             instance.arena = toArena;
+            instance.arena.EnableHighlight();
         }
     }
 }

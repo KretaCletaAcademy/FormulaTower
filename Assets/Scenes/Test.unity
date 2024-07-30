@@ -1792,6 +1792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies: []
   items: []
+  highlightObject: {fileID: 2679083961168594545, guid: 3573d9e852b9a4a4e80951e8aad68bce, type: 3}
 --- !u!4 &297787330
 Transform:
   m_ObjectHideFlags: 0
@@ -2990,11 +2991,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6336462976861065554, guid: bb0eac76ea65fa74e83a694eb7d3b2db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.021411423
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 6336462976861065554, guid: bb0eac76ea65fa74e83a694eb7d3b2db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.13166855
+      value: 2.81
       objectReference: {fileID: 0}
     - target: {fileID: 6336462976861065554, guid: bb0eac76ea65fa74e83a694eb7d3b2db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5924,6 +5925,7 @@ MonoBehaviour:
   - {fileID: 1410854432}
   items:
   - {fileID: 396805533}
+  highlightObject: {fileID: 2679083961168594545, guid: 3573d9e852b9a4a4e80951e8aad68bce, type: 3}
 --- !u!4 &1004475566
 Transform:
   m_ObjectHideFlags: 0
@@ -8977,7 +8979,7 @@ Transform:
   m_GameObject: {fileID: 1523080441}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -0.69, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11938,9 +11940,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 0}
   - {fileID: 476302846}
   items: []
+  highlightObject: {fileID: 2679083961168594545, guid: 3573d9e852b9a4a4e80951e8aad68bce, type: 3}
 --- !u!4 &2111775035
 Transform:
   m_ObjectHideFlags: 0
