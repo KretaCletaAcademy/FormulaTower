@@ -11,8 +11,12 @@ public class Item : MonoBehaviour
 
     private PowerBarMechanics barMechanics;
 
+    [SerializeField]
+    public GameObject highlight;
+
     private void Awake()
     {
+        highlight.SetActive(false);
         power = new AtomicVariable<int>(EvaluteMechanics.Eval(powerBarText));
         barMechanics = new PowerBarMechanics(power, powerBarEvent, powerBarPrefab, transform.position, powerBarText);
     }
@@ -32,6 +36,7 @@ public class Item : MonoBehaviour
         if (!Arena.CheckItem(this)) return;
         var character = Character.instance;
         character.power.Value += power.Value;
+        Destroy(highlight);
         Destroy(this.gameObject);
     }
 }

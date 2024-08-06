@@ -40,6 +40,10 @@ public class Character : MonoBehaviour
         wayPointsMechanics = new WayPointsMechaincs(moveEvent, speed);
     }
 
+    private void Start()
+    {
+        arena.setHighlight(true);
+    }
     private void OnEnable()
     {
         barMechanics.OnEnable();

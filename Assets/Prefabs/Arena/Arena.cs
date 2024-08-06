@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,8 +12,10 @@ public class Arena : MonoBehaviour
     public List<Item> items;
 
     [SerializeField]
-    public GameObject highlightObject;
+    private List<Road> roads;
 
+    [SerializeField]
+    public GameObject highlightObject;
 
     private static List<GameObject> objects = new();
 
@@ -28,26 +31,32 @@ public class Arena : MonoBehaviour
         return instance.arena.items.Contains(item);
     }
 
-    public void EnableHighlight()
+    public void setHighlight(bool value)
     {
-        foreach (var enemy in enemies) {
-            var obj = Instantiate(highlightObject);
-            obj.transform.position = new Vector3(enemy.transform.position.x, enemy.transform.position.y / 2);
-            objects.Add(obj);
+        var i = 0;
+        while (enemies.Count > i) {
+            if (enemies[i] == null)
+            {
+                enemies.RemoveAt(i);
+                continue;
+            }
+            enemies[i].highlight.SetActive(value);
+            i++;
         }
-        foreach (var enemy in items)
+        i = 0;
+        while (items.Count > i)
         {
-            var obj = Instantiate(highlightObject);
-            obj.transform.position = new Vector3(enemy.transform.position.x, enemy.transform.position.y / 2);
-            objects.Add(obj);
+            if (items[i] == null)
+            {
+                items.RemoveAt(i);
+                continue;
+            }
+            items[i].highlight.SetActive(value);
+            i++;
         }
-    }
-
-    public void DisableHighlight()
-    {
-        while (objects.Count != 0) {
-            Destroy(objects[0]);
-            objects.RemoveAt(0);
+        foreach (var item in roads)
+        {
+            item.highlight.SetActive(value);
         }
     }
 }

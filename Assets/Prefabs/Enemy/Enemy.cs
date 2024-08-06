@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Data;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -13,9 +10,12 @@ public class Enemy : MonoBehaviour
     public AtomicEvent<int> powerComprasionEvent;
 
     [SerializeField]
+    public GameObject highlight;
+
+    [SerializeField]
     public string powerBarText;
 
-    public List<Transform> points = new List<Transform>();
+    //public List<Transform> points = new List<Transform>();
 
     public GameObject powerBarPrefab;
 
@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
+        highlight.SetActive(false);
         isDead = new AtomicVariable<bool>(false);
         power = new AtomicVariable<int>(EvaluteMechanics.Eval(powerBarText));
         deathMechanics = new DeathMechanics(power, isDead, deathEvent);
@@ -55,7 +56,7 @@ public class Enemy : MonoBehaviour
         if (instance.power.Value != 0)
         {
             power.Value = 0;
-            instance.moveEvent.Invoke(points);
+            Destroy(highlight);
             Destroy(gameObject);
         }
     }

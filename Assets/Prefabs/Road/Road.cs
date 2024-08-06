@@ -25,8 +25,12 @@ class Road: MonoBehaviour
 
     private PowerBarMechanics powerBarMechanics;
 
+    [SerializeField]
+    public GameObject highlight;
+
     private void Awake()
     {
+        highlight.SetActive(false);
         power = new AtomicVariable<int>(EvaluteMechanics.Eval(powerBarText));
         powerBarMechanics = new PowerBarMechanics(power, atomicEvent, powerBarPrefab, transform.position, powerBarText);
     }
@@ -41,21 +45,40 @@ class Road: MonoBehaviour
         powerBarMechanics.OnDisable();
     }
 
+    public void ReverseDirection()
+    {
+        (fromArena, toArena) = (toArena, fromArena);
+        points.Reverse();
+    }
+
+    public bool PlayerCanMove()
+    {
+        var instance = Character.instance;
+        return instance.power.Value - power.Value > 0;
+    }
+
     private void OnMouseDown()
     {
         var instance = Character.instance;
-        if (instance.arena != fromArena) {
+
+        if (instance.arena != fromArena && instance.arena != toArena) {
             return;
         }
-        instance.comparisonPowerEvent.Invoke(power.Value);
-        instance.powerBarEvent.Invoke(instance.power.Value);
-        if (instance.power.Value != 0)
+        if (instance.arena == toArena)
         {
-            if (instance.arena != null) instance.arena.DisableHighlight();
-            power.Value = 0;
+            ReverseDirection();
+        }
+        
+        if (PlayerCanMove())
+        {
+            instance.power.Value -= power.Value;
+            if (instance.arena != null) instance.arena.setHighlight(false);
             instance.moveEvent.Invoke(points);
             instance.arena = toArena;
-            instance.arena.EnableHighlight();
+            instance.arena.setHighlight(true);
+        } else
+        {
+            highlight.SetActive(false);
         }
     }
 }
